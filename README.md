@@ -1,5 +1,7 @@
 # ROS 2 RGB-D Mapping Pipeline
 
+[![ROS 2 Jazzy Build and Test](https://github.com/Sid-Dhar4/ros2-rgbd-mapping-pipeline/actions/workflows/ros2_jazzy_ci.yml/badge.svg)](https://github.com/Sid-Dhar4/ros2-rgbd-mapping-pipeline/actions/workflows/ros2_jazzy_ci.yml)
+
 A ROS 2 Jazzy RGB-D mapping project that replays public TUM RGB-D sequences, publishes RGB/depth/camera-info topics, converts depth images into colored PointCloud2 clouds, filters/downsamples the clouds, transforms them into a world frame using TUM ground-truth poses, accumulates a global map in a C++/PCL node, visualizes the result in RViz, and exports the final reconstruction as PCD/PLY.
 
 This project is focused on reproducible RGB-D geometry, point-cloud processing, TF, C++ map accumulation, and measurable runtime behavior.
