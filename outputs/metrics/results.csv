@@ -1,0 +1,2 @@
+sequence,rgbd_frames,raw_cloud_rate_hz,filtered_cloud_rate_hz,map_cloud_rate_hz,raw_points_typical,filtered_points_typical,point_reduction_typical,map_points_final,pcd_size_kb,ply_size_kb
+rgbd_dataset_freiburg1_xyz,798,10.0,10.0,1.66,14000-15500,1500-6000,60-90%,17810,279,262

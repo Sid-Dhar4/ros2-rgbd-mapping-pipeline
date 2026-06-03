@@ -1,0 +1,48 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Large local datasets
+data/*
+!data/.gitkeep
+
+# Generated videos
+outputs/videos/*
+!outputs/videos/.gitkeep
+
+# Generated screenshots, except curated README screenshots
+outputs/screenshots/*
+!outputs/screenshots/.gitkeep
+!outputs/screenshots/README_*.png
+!outputs/screenshots/README_*.jpg
+!outputs/screenshots/README_*.jpeg
+
+# Metrics: keep curated CSV/markdown summaries
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+!outputs/metrics/results.csv
+!outputs/metrics/metrics_summary.md
+
+# Maps: keep curated sample maps only
+outputs/maps/*
+!outputs/maps/.gitkeep
+!outputs/maps/final_map_cpp.pcd
+!outputs/maps/final_map_cpp.ply
+
+# ROS bag/database files
+*.bag
+*.db3
+*.mcap
