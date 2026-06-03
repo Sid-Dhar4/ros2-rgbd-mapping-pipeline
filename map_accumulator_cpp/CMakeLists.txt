@@ -84,6 +84,29 @@ install(
 
 if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
+
+  ament_add_gtest(test_pointcloud_utils test/test_pointcloud_utils.cpp)
+
+  if(TARGET test_pointcloud_utils)
+    target_include_directories(test_pointcloud_utils PUBLIC
+      $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+      ${PCL_INCLUDE_DIRS}
+    )
+
+    ament_target_dependencies(
+      test_pointcloud_utils
+      sensor_msgs
+      std_msgs
+      geometry_msgs
+      pcl_conversions
+    )
+
+    target_link_libraries(
+      test_pointcloud_utils
+      pointcloud_utils
+      ${PCL_LIBRARIES}
+    )
+  endif()
 endif()
 
 ament_export_include_directories(include)
