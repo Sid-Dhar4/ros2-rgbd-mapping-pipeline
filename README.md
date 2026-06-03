@@ -60,6 +60,26 @@ Run the full mapping pipeline with RViz:
 ros2 launch rgbd_mapping_pipeline rviz_mapping.launch.py
 ```
 
+```
+
+## Dataset setup
+
+The full TUM RGB-D sequence is not committed to this repository. Download and prepare it locally:
+
+```bash
+cd ~/ros2_rgbd_ws/src/ros2-rgbd-mapping-pipeline/data
+wget https://cvg.cit.tum.de/rgbd/dataset/freiburg1/rgbd_dataset_freiburg1_xyz.tgz
+tar -xzf rgbd_dataset_freiburg1_xyz.tgz
+```
+
+Create the RGB-depth and RGB-D-pose association files:
+
+```bash
+cd ~/ros2_rgbd_ws/src/ros2-rgbd-mapping-pipeline
+python3 scripts/make_tum_associations.py --dataset-dir data/rgbd_dataset_freiburg1_xyz --max-time-diff 0.02
+python3 scripts/make_tum_rgbd_pose_associations.py --dataset-dir data/rgbd_dataset_freiburg1_xyz --max-time-diff 0.05
+```
+
 The final map is saved on shutdown:
 
 ```text
