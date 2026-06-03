@@ -195,3 +195,16 @@ ros2 topic hz /map/cloud
 - C++/PCL is used for the map accumulator because world-frame point-cloud accumulation and voxel downsampling are performance-sensitive.
 - TUM ground-truth poses are used intentionally so Version 1 can focus on reproducible RGB-D geometry, TF, point-cloud filtering, and mapping before adding visual odometry or SLAM.
 - The repo does not commit the full TUM dataset; scripts and documentation describe how the data is prepared locally.
+
+## Regenerate metrics
+
+The Version 1 metrics table is generated from a small script so the CSV and Markdown summary stay consistent:
+
+```bash
+python3 scripts/write_metrics_summary.py
+```
+
+This rewrites:
+
+- `outputs/metrics/results.csv`
+- `outputs/metrics/metrics_summary.md`
