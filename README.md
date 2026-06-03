@@ -60,8 +60,6 @@ Run the full mapping pipeline with RViz:
 ros2 launch rgbd_mapping_pipeline rviz_mapping.launch.py
 ```
 
-```
-
 ## Dataset setup
 
 The full TUM RGB-D sequence is not committed to this repository. Download and prepare it locally:
