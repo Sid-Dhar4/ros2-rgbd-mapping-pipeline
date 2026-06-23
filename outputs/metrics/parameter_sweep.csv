@@ -1,0 +1,4 @@
+case_name,map_voxel_size_m,accumulate_every_n_frames,publish_every_n_processed_frames,occupancy_resolution_m,expected_update_hz,final_map_points,last_occupied_cells,pcd_size_kb,duration_seconds,notes
+baseline,0.05,3,2,0.05,1.667,14741,4310,232,35,"Default V1.2-style settings."
+dense_map,0.03,3,2,0.05,1.667,43233,4219,676,35,"Smaller map voxel keeps more geometric detail."
+faster_sparse,0.08,1,2,0.10,5.000,6159,1278,100,35,"Sparse map with faster expected updates and coarser occupancy grid."

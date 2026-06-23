@@ -241,3 +241,28 @@ In another terminal, visualize the accumulated map and occupancy grid:
 ```bash
 ros2 launch rgbd_mapping_pipeline rviz_occupancy_grid.launch.py
 ```
+
+## Parameter sweep
+
+Version 1.3 adds a short parameter sweep for the RGB-D mapping plus occupancy-grid pipeline.
+
+The sweep compares map voxel size, accumulation interval, and occupancy-grid resolution to show the tradeoff between map detail, update rate, and output size.
+
+Artifacts:
+
+- `outputs/metrics/parameter_sweep.csv`
+- `outputs/metrics/parameter_sweep_summary.md`
+
+Run:
+
+```bash
+DURATION_SECONDS=35 bash scripts/run_parameter_sweep.sh
+```
+
+Example result:
+
+| Case | Final map points | Occupied cells | Expected update rate |
+|---|---:|---:|---:|
+| baseline | 14,741 | 4,310 | ~1.667 Hz |
+| dense_map | 43,233 | 4,219 | ~1.667 Hz |
+| faster_sparse | 6,159 | 1,278 | ~5.000 Hz |

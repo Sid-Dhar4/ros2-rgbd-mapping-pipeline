@@ -49,3 +49,9 @@ outputs/maps/*
 
 # Curated occupancy-grid verification artifact
 !outputs/metrics/occupancy_grid_live_check.md
+
+# Local parameter-sweep run outputs
+outputs/sweeps/*
+!outputs/sweeps/.gitkeep
+!outputs/metrics/parameter_sweep.csv
+!outputs/metrics/parameter_sweep_summary.md
