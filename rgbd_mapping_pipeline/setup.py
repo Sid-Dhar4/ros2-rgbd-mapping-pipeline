@@ -26,6 +26,7 @@ setup(
             "rgbd_dataset_publisher = rgbd_mapping_pipeline.rgbd_dataset_publisher_node:main",
             "depth_to_cloud = rgbd_mapping_pipeline.depth_to_cloud_node:main",
             "cloud_filter = rgbd_mapping_pipeline.cloud_filter_node:main",
+            "occupancy_grid = rgbd_mapping_pipeline.occupancy_grid_node:main",
         ],
     },
 )
