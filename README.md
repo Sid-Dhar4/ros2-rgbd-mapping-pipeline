@@ -216,3 +216,27 @@ This rewrites:
 - [Debugging and failure modes](docs/debugging_and_failure_modes.md)
 - [Demo recording checklist](docs/demo_recording_checklist.md)
 - [Resume bullets](docs/resume_bullets.md)
+
+## Occupancy grid bridge
+
+Version 1.2 adds a navigation-relevant bridge from the accumulated RGB-D point-cloud map to a 2D occupancy grid:
+
+```text
+/map/cloud -> obstacle-height filter -> /map/occupancy_grid
+```
+
+The occupancy-grid node subscribes to `/map/cloud`, keeps points inside an obstacle-height band, projects valid XYZ points into XY grid cells, optionally inflates occupied cells, and publishes `nav_msgs/OccupancyGrid` on `/map/occupancy_grid`.
+
+This is not full Nav2 or autonomous navigation. It is a costmap-style representation that shows how RGB-D perception output can become a navigation-relevant world model.
+
+Run the pipeline:
+
+```bash
+ros2 launch rgbd_mapping_pipeline occupancy_grid_pipeline.launch.py
+```
+
+In another terminal, visualize the accumulated map and occupancy grid:
+
+```bash
+ros2 launch rgbd_mapping_pipeline rviz_occupancy_grid.launch.py
+```
