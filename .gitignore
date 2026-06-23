@@ -46,3 +46,6 @@ outputs/maps/*
 *.bag
 *.db3
 *.mcap
+
+# Curated occupancy-grid verification artifact
+!outputs/metrics/occupancy_grid_live_check.md
