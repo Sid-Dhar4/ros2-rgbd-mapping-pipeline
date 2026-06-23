@@ -10,6 +10,10 @@ This project is focused on reproducible RGB-D geometry, point-cloud processing, 
 
 ![Accumulated RGB-D map in RViz](outputs/screenshots/README_accumulated_map.png)
 
+![RGB-D mapping teaser](media/rgbd_mapping_teaser.gif)
+
+Full demo video: [`media/rgbd_mapping_demo.mp4`](media/rgbd_mapping_demo.mp4)
+
 Version 1 result on `rgbd_dataset_freiburg1_xyz`:
 
 | Output | Result |
