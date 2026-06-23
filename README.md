@@ -208,3 +208,11 @@ This rewrites:
 
 - `outputs/metrics/results.csv`
 - `outputs/metrics/metrics_summary.md`
+
+## Additional documentation
+
+- [Architecture](docs/architecture.md)
+- [How to read results](docs/how_to_read_results.md)
+- [Debugging and failure modes](docs/debugging_and_failure_modes.md)
+- [Demo recording checklist](docs/demo_recording_checklist.md)
+- [Resume bullets](docs/resume_bullets.md)
